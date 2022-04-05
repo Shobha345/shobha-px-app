@@ -1,0 +1,26 @@
+.main-content {
+    margin-top: 25px;
+}
+
+.test-salary-button {
+    color: #116de6!important;
+    margin: 2px!important;
+    padding: 2px !important;
+
+
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.6;
+    vertical-align: middle;
+    transition: color 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+    font-family: Montserrat;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(2, 23, 53);
+    background-color: transparent;
+}

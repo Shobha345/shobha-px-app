@@ -1,0 +1,25 @@
+#navbardiv{
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    background-color: black;
+    width: 100%;
+}
+
+.ullist {
+    list-style: none;
+}
+
+.ullist li 
+{
+    display: inline-block;
+    padding: 5px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    text-decoration: underline;
+}

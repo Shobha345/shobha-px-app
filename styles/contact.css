@@ -1,0 +1,30 @@
+#form
+{
+    display: block;
+    width: 450px;
+    border: 2px solid black;
+    padding: 20px 45px 15px 15px;
+    margin: 0 auto;
+}
+
+#form input {
+    width: 100%;
+    border-radius: 5px;
+    height: 20px;
+    background: whitesmoke;
+}
+
+#form #message
+{
+    width: 100%;
+    border-radius: 5px;
+    height: 20px;
+    background: whitesmoke;
+    height: 175px;
+}
+
+#form input[type="submit"] {
+    background: black;
+    color: white;
+    height: 40px;
+}
