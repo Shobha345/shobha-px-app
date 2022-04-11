@@ -11,7 +11,7 @@ var useremail = 'demouser@gmail.com';
 
 function checkIfValidUser() {
     var user = document.getElementById('email');
-    if(user.value === useremail)
+    if(user.value === useremail || user.value == 'saikumar@gmail.com' || user.value == 'sai24@gmail.com' || user.value == 'kumar@gmail.com')
     {
         //passing user and account objects //works only after apt.init
         aptrinsic("identify",
@@ -21,6 +21,7 @@ function checkIfValidUser() {
         "email": useremail,
         "firstName": "Sai",
         "lastName": "Kumar",
+        "role": "PX Analyst",
         "signUpDate": 1522697426479, //unix time in ms
         "plan" : "Premium", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
         "price" : 95.5,
@@ -30,7 +31,8 @@ function checkIfValidUser() {
         //Account Fields
         "id":"GSPX", //Required
         "name":"Gainsight",
-        "Program": "Platinum" // flat custom attributes
+        "Program": "Platinum", // flat custom attributes
+        "Subscription" : "Trial"
         });
 
         alert('There you go!');
