@@ -3,7 +3,7 @@
       (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
     var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
     var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
-  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-GBHANBHUKHYZ-2-4");
+  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-GBHANBHUKHYZ-2");
 
 
 
@@ -17,10 +17,10 @@ function checkIfValidUser() {
         aptrinsic("identify",
         {
         //User Fields
-        "id": "basic1234" + useremail, // Required for logged in app users
+        "id": "basic12345" + useremail, // Required for logged in app users
         "email": useremail,
         "firstName": "Sai",
-        "lastName": "Kumar",
+        "lastName": "Padala",
         "role": "PX Analyst",
         "signUpDate": 1522697426479, //unix time in ms
         "plan" : "Premium", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
