@@ -3,7 +3,7 @@
       (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
     var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
     var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
-  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-GBHANBHUKHYZ-2");
+  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-GBHANBHUKHYZ-2-4");
 
 
 
@@ -11,7 +11,7 @@ var useremail = 'demouser@gmail.com';
 
 function checkIfValidUser() {
     var user = document.getElementById('email');
-    if(user.value === useremail || user.value == 'saikumar@gmail.com' || user.value == 'sai24@gmail.com' || user.value == 'kumar@gmail.com')
+    if(user.value === useremail || user.value == 'saikumar@gmail.com' || user.value == 'sai24@gmail.com' || user.value == 'kumar@gmail.com'|| user.value == 'integration@gmail.com')
     {
         //passing user and account objects //works only after apt.init
         aptrinsic("identify",
