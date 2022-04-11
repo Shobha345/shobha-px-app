@@ -19,10 +19,10 @@ function checkIfValidUser() {
         //User Fields
         "id": "basic1234" + useremail, // Required for logged in app users
         "email": useremail,
-        "firstName": "John",
-        "lastName": "Smith",
+        "firstName": "Sai",
+        "lastName": "Kumar",
         "signUpDate": 1522697426479, //unix time in ms
-        "plan" : "gold", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
+        "plan" : "Premium", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
         "price" : 95.5,
         "userHash": "" // optional transient for HMAC identification
         },
