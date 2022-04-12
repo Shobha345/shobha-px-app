@@ -7,11 +7,11 @@
 
 
 
-var user;
+
 
 function checkIfValidUser() {
     // var user = document.getElementById('email');
-    user = document.getElementById('email').value;
+    var user = document.getElementById('email').value;
     var b;
     const companyid = {
       i1: "GS-PX",
@@ -26,7 +26,7 @@ function checkIfValidUser() {
 
     if(user === 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com')
     {
-        alert('There you go!');
+        
         b = user.substr(8, 5);
         var id = b;
         if(user == 'saikumar@gmail.com')
@@ -105,6 +105,7 @@ function checkIfValidUser() {
             });
         }
       //route to homepage.html
+      alert('There you go!');
       location.replace("homepage.html");
     } 
     else
