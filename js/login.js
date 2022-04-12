@@ -7,11 +7,11 @@
 
 
 
-var useremail = 'demouser@gmail.com';
+var user;
 
 function checkIfValidUser() {
     // var user = document.getElementById('email');
-    var user = document.getElementById('email').value;
+    user = document.getElementById('email').value;
     var b;
     const companyid = {
       i1: "GS-PX",
@@ -24,9 +24,9 @@ function checkIfValidUser() {
       n3: "Revenue Optimization"
     }
 
-    if(user!="")
+    if(user!= undefined || user!= " ")
     {
-      if(user === useremail || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com')
+      if(user === 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com')
       {
         alert('There you go!');
         b = user.substr(8, 5);
@@ -37,15 +37,17 @@ function checkIfValidUser() {
             {
             //User Fields
             "id": "basic12345" + useremail,
-            "email": useremail,
+            "email": user,
             "firstName": "Sai",
             "lastName": "Kumar",
-            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c"
+            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
+            "level": "Junior"
             },
             {
             //Account Fields
             "id": companyid.i1, 
-            "name": companyname.n1
+            "name": companyname.n1,
+            accounttype: "Diamond"
             });
         } 
         else if(user == 'sai24@gmail.com')
@@ -54,15 +56,17 @@ function checkIfValidUser() {
             {
             //User Fields
             "id": id,
-            "email": useremail,
+            "email": user,
             "firstName": "Sai",
             "lastName": "Padala",
-            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c"
+            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
+            "level": "Senior"
             },
             {
             //Account Fields
             "id": companyid.i2, 
-            "name": companyname.n2
+            "name": companyname.n2,
+            accounttype: "Premium"
             });
         }
         else if(user == 'kumar@gmail.com')
@@ -71,17 +75,38 @@ function checkIfValidUser() {
             {
             //User Fields
             "id": id,
-            "email": useremail,
+            "email": user,
             "firstName": "Kumar",
             "lastName": "Padala",
-            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c"
+            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
+            "level": "Manager"
             },
             {
             //Account Fields
             "id": companyid.i3, 
-            "name": companyname.n3
+            "name": companyname.n3,
+            accounttype: "Platinum"
             });
         }
+        else{
+          aptrinsic("identify",
+            {
+            //User Fields
+            "id": id,
+            "email": user,
+            "firstName": "Unkown",
+            "lastName": "user",
+            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
+            "level": "Associate"
+            },
+            {
+            //Account Fields
+            "id": companyid.i1, 
+            "name": companyname.n1,
+            accounttype: "FREE"
+            });
+        }
+
           
       }
       //route to homepage.html
@@ -95,6 +120,7 @@ function checkIfValidUser() {
 
 //clearing cookies
 function deleteAllCookies() {
-  window.aptrinsic('reset');
+  console.log("deleting cookies...");
+  aptrinsic('reset');
   // counter = 0;
 }
