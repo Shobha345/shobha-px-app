@@ -24,10 +24,8 @@ function checkIfValidUser() {
       n3: "Revenue Optimization"
     }
 
-    if(user!= undefined || user!= " ")
+    if(user === 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com')
     {
-      if(user === 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com')
-      {
         alert('There you go!');
         b = user.substr(8, 5);
         var id = b;
@@ -106,9 +104,6 @@ function checkIfValidUser() {
             accounttype: "FREE"
             });
         }
-
-          
-      }
       //route to homepage.html
       location.replace("homepage.html");
     } 
