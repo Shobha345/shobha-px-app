@@ -29,7 +29,26 @@ function checkIfValidUser() {
         
         b = user.substr(8, 5);
         var id = b;
-        if(user == 'saikumar@gmail.com')
+        if(user == 'demouser@gmail.com')
+        {
+            aptrinsic("identify",
+            {
+            //User Fields
+            "id": "beginner" + useremail,
+            "email": user,
+            "firstName": "Demo",
+            "lastName": "User",
+            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
+            "level": "Assistant"
+            },
+            {
+            //Account Fields
+            "id": companyid.i1, 
+            "name": companyname.n1,
+            accounttype: "Test"
+            });
+        } 
+        else if(user == 'saikumar@gmail.com')
         {
             aptrinsic("identify",
             {
