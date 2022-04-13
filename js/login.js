@@ -53,7 +53,7 @@ function checkIfValidUser() {
             aptrinsic("identify",
             {
             //User Fields
-            "id": "basic12345" + useremail,
+            "id": "basic12345" + user,
             "email": user,
             "firstName": "Sai",
             "lastName": "Kumar",
