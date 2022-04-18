@@ -62,6 +62,33 @@
             <input type="date" name="birthday" id="birthday">
             <input type="button" id="btn_age" value="calculate Age">
             <input type="button" value="YES" class="btn btn-primary">
+            <br><br> <br><br>
+            <div class="sendinfo">
+                
+        
+                        <label>Name:</label>
+                        <input type="text" id="username">
+                        <br><br>
+                        <label>Email:</label>
+                        <input type="email" id="useremail">
+                        <br><br>
+               
+                        <label>Department:</label>
+                        <select name="department" id="department">
+                            <option value="Customer Success">Customer Success</option>
+                            <option value="Product Experience">Product Experience</option>
+                            <option value="Revenue optimization">Revenue optimization</option>
+                        </select>
+                        <br><br> 
+                        <input 
+                            type="button" 
+                            value="Send Information" 
+                            onclick="sendInfo(document.getElementById('username').value, 
+                            document.getElementById('useremail').value, useremail,
+                            document.getElementById('department').value, useremail)"
+                        >
+      
+            </div class="sendinfo">
         </main>
     </div>
 </body>

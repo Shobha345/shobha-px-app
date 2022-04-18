@@ -139,3 +139,9 @@ function deleteAllCookies() {
   aptrinsic('reset');
   // counter = 0;
 }
+
+//Track info on details submission
+function sendInfo(name, email, dept)
+{
+  aptrinsic('track', 'Send Information', {"Name": name, "Email": email, "Department": dept});
+}
