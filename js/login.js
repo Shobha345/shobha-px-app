@@ -105,6 +105,25 @@ function checkIfValidUser() {
             accounttype: "Platinum"
             });
         }
+        else if(user == 'sai24kumar24@gmail.com')
+        {
+            aptrinsic("identify",
+            {
+            //User Fields
+            "id": id,
+            "email": user,
+            "firstName": "Sai Kumar",
+            "lastName": "Padala",
+            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
+            "level": "Director"
+            },
+            {
+            //Account Fields
+            "id": companyid.i3, 
+            "name": companyname.n3,
+            accounttype: "Platinum"
+            });
+        }
         else{
           aptrinsic("identify",
             {
@@ -120,7 +139,7 @@ function checkIfValidUser() {
             //Account Fields
             "id": companyid.i1, 
             "name": companyname.n1,
-            accounttype: "FREE"
+            accounttype: "Premium"
             });
         }
       //route to homepage.html
