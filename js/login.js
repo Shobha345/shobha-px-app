@@ -24,7 +24,7 @@ function checkIfValidUser() {
       n3: "Revenue Optimization"
     }
 
-    if(user === 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com'|| user == 'sai24kumar24@gmail.com' || user == 'skpadala@gainsight.com')
+    if(user === 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com'|| user == 'sai24kumar24@gmail.com' || user == 'skpadala@gainsight.com' || user == 'user11@gmail.com')
     {
         
         b = user.substr(8, 5);
@@ -135,6 +135,25 @@ function checkIfValidUser() {
             "lastName": "Padala",
             "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
             "level": "Director"
+            },
+            {
+            //Account Fields
+            "id": companyid.i3, 
+            "name": companyname.n3,
+            accounttype: "Platinum"
+            });
+        }
+        else if(user == 'user11@gmail.com')
+        {
+            aptrinsic("identify",
+            {
+            //User Fields
+            "id": id,
+            "email": user,
+            "firstName": "Temp user",
+            "lastName": "temp user",
+            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
+            "level": "Starter"
             },
             {
             //Account Fields
