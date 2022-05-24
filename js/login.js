@@ -16,12 +16,16 @@ function checkIfValidUser() {
     const companyid = {
       i1: "GS-PX",
       i2: "GS-CS",
-      i3: "GS-RO"
+      i3: "GS-RO",
+      i4: "GS-NXT",
+      i5: "GS-PRO"
     }
     const companyname = {
       n1: "Product Experience",
       n2: "Customer Success",
-      n3: "Revenue Optimization"
+      n3: "Revenue Optimization",
+      n4: "Gainsight Next",
+      n5: "Gainsight PRO"
     }
 
     if(user === 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com'|| user == 'sai24kumar24@gmail.com' || user == 'skpadala@gainsight.com' || user == 'user11@gmail.com')
@@ -157,8 +161,8 @@ function checkIfValidUser() {
             },
             {
             //Account Fields
-            "id": companyid.i3, 
-            "name": companyname.n3,
+            "id": companyid.i4, 
+            "name": companyname.n4,
             accounttype: "Platinum"
             });
         }
