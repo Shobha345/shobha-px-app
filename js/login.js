@@ -28,7 +28,7 @@ function checkIfValidUser() {
       n5: "Gainsight PRO"
     }
 
-    if(user === 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com'|| user == 'sai24kumar24@gmail.com' || user == 'skpadala@gainsight.com' || user == 'user11@gmail.com')
+    if(user === 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com'|| user == 'sai24kumar24@gmail.com' || user == 'skpadala@gainsight.com' || user == 'user11@gmail.com' || user == 'padala@gmail.com')
     {
         
         b = user.substr(8, 5);
@@ -61,6 +61,25 @@ function checkIfValidUser() {
             "email": user,
             "firstName": "Sai",
             "lastName": "Kumar",
+            "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
+            "level": "Junior"
+            },
+            {
+            //Account Fields
+            "id": companyid.i1, 
+            "name": companyname.n1,
+            accounttype: "Diamond"
+            });
+        } 
+        else if(user == 'padala@gmail.com')
+        {
+            aptrinsic("identify",
+            {
+            //User Fields
+            "id": "padala" + user,
+            "email": user,
+            "firstName": "Padala",
+            "lastName": "Sai",
             "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
             "level": "Junior"
             },
