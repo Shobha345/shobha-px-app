@@ -225,3 +225,12 @@ function sendInfo(name, email, dept)
 {
   aptrinsic('track', 'Send Information', {"Name": name, "Email": email, "Department": dept});
 }
+
+function search(ele)
+{
+	if(event.key === "Enter")
+  {
+  	aptrinsic('track', "capturetypedtext", {"typedValue": ele.value});
+  	alert(ele.value);
+	}
+}
