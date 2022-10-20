@@ -239,3 +239,8 @@ function search(ele)
   	alert(ele.value);
 	}
 }
+
+function customEventOnPageLoad()
+{
+	aptrinsic('set', 'globalContext', {"version":555, "name":"FGlobalContext"});
+}
