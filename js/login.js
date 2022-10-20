@@ -242,5 +242,5 @@ function search(ele)
 
 function customEventOnPageLoad()
 {
-	aptrinsic('set', 'globalContext', {"version":555, "name":"FGlobalContext"});
+	aptrinsic('set', 'globalContext', {"model":555, "version":"Latest"});
 }
