@@ -95,6 +95,7 @@ function checkIfValidUser() {
             accounttype: "Diamond"
             });
         } 
+        
         else if(user == 'sai24@gmail.com')
         {
             aptrinsic("identify",
@@ -248,3 +249,5 @@ function search(ele)
 function HelloFromAlert() {
   alert("HELLO");
 }
+
+var config = {kcAllowedFuncNames : ["HelloFromAlert"]}
