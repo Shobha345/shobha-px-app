@@ -240,7 +240,11 @@ function search(ele)
 	}
 }
 
-function customEventOnPageLoad()
-{
-	aptrinsic('set', 'globalContext', {"model":555, "version":"Latest"});
+// function customEventOnPageLoad()
+// {
+// 	aptrinsic('set', 'globalContext', {"model":555, "version":"Latest"});
+// }
+
+function HelloFromAlert() {
+  alert("HELLO");
 }
