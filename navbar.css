@@ -8,8 +8,7 @@
 
 .ullist {
     list-style: none;
-    position: relative;
-    z-index: 7;
+
 }
 
 .ullist li 
