@@ -251,3 +251,12 @@ var config = {kcAllowedFuncNames : ["HelloFromAlert"]}
 
 var testString = 'Text';
 
+function limitSearch()
+{
+  aptrinsic('bot', 'search', {labels: ['test_label']});
+}
+
+function removeLimit()
+{
+  aptrinsic('bot','search', { labels: [] });
+}
