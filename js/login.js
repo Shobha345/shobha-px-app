@@ -45,7 +45,9 @@ function checkIfValidUser() {
             "firstName": "Demo",
             "lastName": "User",
             "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
-            "level": "Assistant"
+            "level": "Assistant",
+            "language": "English"
+
             },
             {
             //Account Fields
@@ -227,6 +229,8 @@ function deleteAllCookies() {
 function sendInfo(name, email, dept)
 {
   aptrinsic('track', 'Send Information', {"Name": name, "Email": email, "Department": dept});
+  
+
 }
 
 function search(ele)
