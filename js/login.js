@@ -177,7 +177,7 @@ function checkIfValidUser() {
             {
             //User Fields
             "id": id,
-            "email": user,
+            "email": "556fb80e-76ca-42e1-ac5c-3a47d8694920",
             "firstName": "Temp user",
             "lastName": "temp user",
             "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
@@ -262,5 +262,5 @@ function limitSearch()
 
 function removeLimit()
 {
-  aptrinsic('bot','search', { labels: [] });
+  aptrinsic('bot','search', { labels: [] });f
 }
