@@ -265,24 +265,3 @@ function removeLimit()
   aptrinsic('bot','search', { labels: [] });f
 }
 
-   // JavaScript to toggle link visibility inside the pop-up and control pop-up visibility
-   const openClosePopupBtn = document.getElementById('openClosePopupBtn');
-   const popup = document.getElementById('popup');
-   const toggleBtn = document.getElementById('toggleBtn');
-   const popupLink = document.getElementById('popupLink');
-
-   openClosePopupBtn.addEventListener('click', function() {
-       if (popup.style.display === 'none') {
-           popup.style.display = 'block'; // Show pop-up when button is clicked
-       } else {
-           popup.style.display = 'none'; // Hide pop-up when button is clicked again
-       }
-   });
-
-   toggleBtn.addEventListener('click', function() {
-       if (popupLink.style.display === 'none') {
-           popupLink.style.display = 'inline'; // Show link when toggle is on
-       } else {
-           popupLink.style.display = 'none'; // Hide link when toggle is off
-       }
-   });
