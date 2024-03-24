@@ -120,7 +120,7 @@ function checkIfValidUser() {
             {
             //User Fields
             "id": id,
-            "email": user,
+            "email": user, 
             "firstName": "Kumar",
             "lastName": "Padala",
             "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
@@ -176,7 +176,7 @@ function checkIfValidUser() {
             aptrinsic("identify",
             {
             //User Fields
-            "id": id,
+            "id": ,
             "email": "556fb80e-76ca-42e1-ac5c-3a47d8694920",
             "firstName": "Temp user",
             "lastName": "temp user",
@@ -264,3 +264,25 @@ function removeLimit()
 {
   aptrinsic('bot','search', { labels: [] });f
 }
+
+   // JavaScript to toggle link visibility inside the pop-up and control pop-up visibility
+   const openClosePopupBtn = document.getElementById('openClosePopupBtn');
+   const popup = document.getElementById('popup');
+   const toggleBtn = document.getElementById('toggleBtn');
+   const popupLink = document.getElementById('popupLink');
+
+   openClosePopupBtn.addEventListener('click', function() {
+       if (popup.style.display === 'none') {
+           popup.style.display = 'block'; // Show pop-up when button is clicked
+       } else {
+           popup.style.display = 'none'; // Hide pop-up when button is clicked again
+       }
+   });
+
+   toggleBtn.addEventListener('click', function() {
+       if (popupLink.style.display === 'none') {
+           popupLink.style.display = 'inline'; // Show link when toggle is on
+       } else {
+           popupLink.style.display = 'none'; // Hide link when toggle is off
+       }
+   });

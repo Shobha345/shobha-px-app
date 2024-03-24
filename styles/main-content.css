@@ -24,3 +24,59 @@
     color: rgb(2, 23, 53);
     background-color: transparent;
 }
+
+/* Styles for button */
+#openClosePopupBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#openClosePopupBtn:hover {
+    background-color: #45a049;
+}
+
+/* Styles for pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Styles for toggle button */
+.toggle-btn {
+    padding: 8px 16px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.toggle-btn:hover {
+    background-color: #0073e6;
+}
+
+/* Styles for link */
+#popupLink {
+    display: none;
+    color: #0073e6;
+    text-decoration: none;
+}
+
+#popupLink:hover {
+    text-decoration: underline;
+}
