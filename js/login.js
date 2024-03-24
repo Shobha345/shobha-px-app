@@ -229,8 +229,6 @@ function deleteAllCookies() {
 function sendInfo(name, email, dept)
 {
   aptrinsic('track', 'Send Information', {"Name": name, "Email": email, "Department": dept});
-  
-
 }
 
 function search(ele)
@@ -263,4 +261,10 @@ function limitSearch()
 function removeLimit()
 {
   aptrinsic('bot','search', { labels: [] });f
+}
+
+//custom event for pop up's link
+function linkShown()
+{
+  aptrinsic('track', 'Link Shown', {"Email": email, "Department": dept});
 }
