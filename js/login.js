@@ -266,5 +266,5 @@ function removeLimit()
 //custom event for pop up's link
 function linkShown(email, dept)
 {
-  aptrinsic('track', 'Link Shown', {"Email": email, "Department": dept});
+  aptrinsic('track', 'Link Shown');
 }

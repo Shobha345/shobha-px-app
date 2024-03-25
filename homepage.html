@@ -129,10 +129,9 @@
         </div>
         <button id="openClosePopupBtn">Open/Close Pop-up</button>
         <div id="popup" class="popup">
-        <button id="toggleBtn" class="toggle-btn" onclick="linkShown(document.getElementById('email').value,
-        document.getElementById('department').value)">Toggle</button>
+        <button id="toggleBtn" class="toggle-btn" onclick="linkShown()">Toggle</button>
         <div id="uniquelink">
-        <a id="popupLink" href="#">Link appeared for tooltip</a>
+        <a onload="aptrinsic('track', 'Link appeared');" id="popupLink" href="#">Link appeared for tooltip</a>
         </div>
         </div>
 
