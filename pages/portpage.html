@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../styles/main-content.css">
+    <script src="../js/login.js"></script> <!-- Login JS -->
+    <title>Port Search Tracker</title>
+</head>
+<body>
+    <div>
+        <div id="navbardiv">
+            <nav id="navbar">
+                <ul class="ullist">
+                    <li><a href="/homepage.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!-- <li><a href="widget.html">Widget</a></li> -->
+                    <li><a href="payment.html">Payment</a></li>    
+                    <!-- <li><a href="dataloader.html">Data Loader</a></li>     -->
+                    <li><a href="../index.html" onclick="deleteAllCookies()" >Log out</a></li>    
+                </ul>
+            </nav> 
+        </div>  <!--Nav div end-->
+
+    <!--port search logic-->
+    <input type="text" id="portSearchInput" placeholder="Enter port name">
+    <button onclick="searchPort()">Search</button>
+
+    <div id="uniqueCounts"></div>
+
+    <script>
+        const uniqueSearchCounts = {}; // Track unique searches by each user
+        const totalSearchCounts = {};  // Track total searches for each port
+
+        function recordSearch(portName) {
+            const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
+            const userId = getUserId(); // Assume you have a function to get the user ID
+            uniqueSearchCounts[userId] = uniqueSearchCounts[userId] || {};
+            uniqueSearchCounts[userId][portName] = true;
+
+            totalSearchCounts[portName] = (totalSearchCounts[portName] || 0) + 1;
+
+            // Send custom event to Gainsight PX
+            aptrinsic('track', 'PORT_SEARCH', { "portName": portName });
+        }
+
+        function getUniqueCounts(portName) {
+            return Object.keys(uniqueSearchCounts).reduce((count, userId) => {
+                if (uniqueSearchCounts[userId][portName]) {
+                    count++;
+                }
+                return count;
+            }, 0);
+        }
+
+        function getTotalCounts(portName) {
+            return totalSearchCounts[portName] || 0;
+        }
+
+        function searchPort() {
+            const portName = document.getElementById("portSearchInput").value;
+            if (portName.trim() !== "") {
+                recordSearch(portName);
+                alert("Search recorded for port: " + portName);
+                document.getElementById("portSearchInput").value = ""; // Clear the input field after search
+                updateUniqueCounts();
+            } else {
+                alert("Please enter a valid port name.");
+            }
+        }
+
+        function updateUniqueCounts() {
+            const portNames = Object.keys(totalSearchCounts);
+            const uniqueCountsDiv = document.getElementById("uniqueCounts");
+            uniqueCountsDiv.innerHTML = ""; // Clear existing content
+
+            portNames.forEach(portName => {
+                const uniqueCount = getUniqueCounts(portName);
+                const totalCount = getTotalCounts(portName);
+                const portCountElement = document.createElement("p");
+                portCountElement.textContent = "Port: " + portName + ", Unique Count: " + uniqueCount + ", Total Count: " + totalCount;
+                uniqueCountsDiv.appendChild(portCountElement);
+            });
+        }
+
+        // Mock function to get user ID, replace it with your actual function
+        function getUserId() {
+            return "user123";
+        }
+    </script>
+
+    </div>
+</body>
+</html>
