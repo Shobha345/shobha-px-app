@@ -40,12 +40,12 @@
             const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
             const userId = getUserId(); // Assume you have a function to get the user ID
             uniqueSearchCounts[userId] = uniqueSearchCounts[userId] || {};
-            uniqueSearchCounts[userId][portName] = true;
+            uniqueSearchCounts[userId][portName] = (uniqueSearchCounts[userId][portName] || 0) + 1;
 
             totalSearchCounts[portName] = (totalSearchCounts[portName] || 0) + 1;
 
             // Send custom event to Gainsight PX
-            aptrinsic('track', 'PORT_SEARCH', { "portName": portName });
+            aptrinsic('track', 'PORT_SEARCH', { "portName": portName, "portSearchCount": uniqueSearchCounts[userId][portName] });
         }
 
         function getUniqueCounts(portName) {
