@@ -25,9 +25,9 @@ function checkIfValidUser() {
       n5: "Gainsight PRO"
     }
 
-    if(user == 'demouser@gmail.com' || user === 'saikumar@gmail.com' || user === 'sai24@gmail.com' 
-    || user === 'kumar@gmail.com'|| user === 'integration@gmail.com'|| user === 'sai24kumar24@gmail.com' 
-    || user === 'skpadala@gainsight.com' || user === 'user11@gmail.com' || user === 'padala@gmail.com')
+    if(user == 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' 
+    || user == 'kumar@gmail.com'|| user == 'integration@gmail.com'|| user == 'sai24kumar24@gmail.com' 
+    || user == 'skpadala@gainsight.com' || user == 'user11@gmail.com' || user == 'padala@gmail.com')
     {       
         b = user.substr(8, 5);
         var id = b;
@@ -433,40 +433,40 @@ function sendInfo(name, email, dept)
   aptrinsic('track', 'Send Information', {"Name": name, "Email": email, "Department": dept});
 }
 
-function search(ele)
-{
-	if(event.key === "Enter")
-  {
-  	aptrinsic('track', "capturetypedtext", {"typedValue": ele.value});
-  	alert(ele.value);
-	}
-}
+// function search(ele)
+// {
+// 	if(event.key === "Enter")
+//   {
+//   	aptrinsic('track', "capturetypedtext", {"typedValue": ele.value});
+//   	alert(ele.value);
+// 	}
+// }
 
 // function customEventOnPageLoad()
 // {
 // 	aptrinsic('set', 'globalContext', {"model":555, "version":"Latest"});
 // }
 
-function HelloFromAlert() {
-  alert("HELLO");
-}
+// function HelloFromAlert() {
+//   alert("HELLO");
+// }
 
-//var config = {kcAllowedFuncNames : ["HelloFromAlert"]}
+// //var config = {kcAllowedFuncNames : ["HelloFromAlert"]}
 
-var testString = 'Text';
+// var testString = 'Text';
 
-function limitSearch()
-{
-  aptrinsic('bot', 'search', {labels: ['test_label']});
-}
+// function limitSearch()
+// {
+//   aptrinsic('bot', 'search', {labels: ['test_label']});
+// }
 
-function removeLimit()
-{
-  aptrinsic('bot','search', { labels: [] });f
-}
+// function removeLimit()
+// {
+//   aptrinsic('bot','search', { labels: [] });f
+// }
 
 //custom event for pop up's link
-function linkShown(email, dept)
-{
-  aptrinsic('track', 'Link Shown');
-}
+// function linkShown(email, dept)
+// {
+//   aptrinsic('track', 'Link Shown');
+// }
