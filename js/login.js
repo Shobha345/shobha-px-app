@@ -3,7 +3,7 @@
      (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
    var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
    var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
- })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-GBHANBHUKHYZ-2",{htmlSanitization: true});
+ })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-GBHANBHUKHYZ-2");
 
 
 function checkIfValidUser() {
@@ -25,9 +25,10 @@ function checkIfValidUser() {
       n5: "Gainsight PRO"
     }
 
-    if(user === 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' || user == 'kumar@gmail.com'|| user == 'integration@gmail.com'|| user == 'sai24kumar24@gmail.com' || user == 'skpadala@gainsight.com' || user == 'user11@gmail.com' || user == 'padala@gmail.com')
-    {
-        
+    if(user == 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' 
+    || user == 'kumar@gmail.com'|| user == 'integration@gmail.com'|| user == 'sai24kumar24@gmail.com' 
+    || user == 'skpadala@gainsight.com' || user == 'user11@gmail.com' || user == 'padala@gmail.com')
+    {       
         b = user.substr(8, 5);
         var id = b;
         if(user == 'demouser@gmail.com')
@@ -132,7 +133,7 @@ function checkIfValidUser() {
             //User Fields
             "id": id,
             "email": user,
-            "firstName": "S K",
+            "firstName": "SK",
             "lastName": "Padala",
             "subscriptionId": "e2cdcaad-5fb9-4239-92a0-1504d5e79b3c",
             "level": "PX L2"
@@ -210,11 +211,7 @@ function checkIfValidUser() {
     }
 }
 
-//Segment Tag
-  // !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="Dguo8gX5RLgFTgK6KY7WAwL6oG1JGTqh";;analytics.SNIPPET_VERSION="4.15.3";
-  // analytics.load("Dguo8gX5RLgFTgK6KY7WAwL6oG1JGTqh");
-  // analytics.page();
-  // }}();
+
 
 // function checkIfValidUser() {
 //     // var user = document.getElementById('email');
@@ -430,7 +427,7 @@ function deleteAllCookies() {
   // counter = 0;
 }
 
-//Track info on details submission
+//Track info on details submission (custom event)
 function sendInfo(name, email, dept)
 {
   aptrinsic('track', 'Send Information', {"Name": name, "Email": email, "Department": dept});
@@ -454,7 +451,7 @@ function HelloFromAlert() {
   alert("HELLO");
 }
 
-var config = {kcAllowedFuncNames : ["HelloFromAlert"]}
+//var config = {kcAllowedFuncNames : ["HelloFromAlert"]}
 
 var testString = 'Text';
 
