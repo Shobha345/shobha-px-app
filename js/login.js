@@ -25,9 +25,9 @@ function checkIfValidUser() {
       n5: "Gainsight PRO"
     }
 
-    if(user == 'demouser@gmail.com' || user == 'saikumar@gmail.com' || user == 'sai24@gmail.com' 
-    || user == 'kumar@gmail.com'|| user == 'integration@gmail.com'|| user == 'sai24kumar24@gmail.com' 
-    || user == 'skpadala@gainsight.com' || user == 'user11@gmail.com' || user == 'padala@gmail.com')
+    if(user == 'demouser@gmail.com' || user === 'saikumar@gmail.com' || user === 'sai24@gmail.com' 
+    || user === 'kumar@gmail.com'|| user === 'integration@gmail.com'|| user === 'sai24kumar24@gmail.com' 
+    || user === 'skpadala@gainsight.com' || user === 'user11@gmail.com' || user === 'padala@gmail.com')
     {       
         b = user.substr(8, 5);
         var id = b;
