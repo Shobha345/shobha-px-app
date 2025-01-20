@@ -11,7 +11,11 @@ let isFirstClickTracked = false;
 function trackFirstClickEvent() {
   if (!isFirstClickTracked) {
     aptrinsic('track', 'First Click After Login', {
-      timestamp: new Date().toISOString()
+     elementTag: clickedElement.tagName,  // e.g., BUTTON, DIV, etc.
+     elementText: clickedElement.textContent.trim(),  // The text of the clicked element
+     elementClass: clickedElement.className,  // Classes applied to the clicked element
+     elementId: clickedElement.id,  // ID of the clicked element (if any)
+     timestamp: new Date().toISOString() 
     });
     console.log('Tracked first click after login');
     isFirstClickTracked = true;
