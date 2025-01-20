@@ -5,6 +5,7 @@
    var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-GBHANBHUKHYZ-2");
 
+  let isFirstClickTracked = false;
 
 function checkIfValidUser() {
     // var user = document.getElementById('email');
@@ -205,6 +206,29 @@ function checkIfValidUser() {
       alert('There you go!');
       location.replace("homepage.html");
     } 
+
+ // Define a flag to track whether the first click has been recorded
+// Add an event listener to capture clicks on the entire document
+document.addEventListener("click", function (event) {
+    // Check if the first click has already been tracked
+    if (!isFirstClickTracked) {
+        // Get the clicked element's details
+        const clickedElement = event.target;
+
+        // Send a custom event to Gainsight PX
+        window.aptrinsic("track", "first_click_after_login", {
+            elementTag: clickedElement.tagName,  // e.g., BUTTON, DIV, etc.
+            elementText: clickedElement.textContent.trim(),  // The text of the clicked element
+            elementClass: clickedElement.className,  // Classes applied to the clicked element
+            elementId: clickedElement.id,  // ID of the clicked element (if any)
+            timestamp: new Date().toISOString()  // Time of the first click
+        });
+
+        // Set the flag to true to prevent further tracking
+        isFirstClickTracked = true;
+    }
+});
+
     else
     {
         alert('Invalid user, please use "demouser@gmail.com" to login');
@@ -423,6 +447,7 @@ function checkIfValidUser() {
 //clearing cookies
 function deleteAllCookies() {
   console.log("deleting cookies...");
+ isFirstClickTracked = false;
   aptrinsic('reset');
   // counter = 0;
 }
