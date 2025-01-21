@@ -19,6 +19,7 @@ function trackFirstClickEvent() {
     });
     console.log('Tracked first click after login');
     isFirstClickTracked = true;
+    //pulled
 
     // Remove the event listener after tracking the first click
     document.removeEventListener('click', trackFirstClickEvent);
