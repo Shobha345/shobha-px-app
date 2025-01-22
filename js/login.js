@@ -5,26 +5,43 @@
    var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-GBHANBHUKHYZ-2");
 
-let isFirstClickTracked = false;
+ //code to track first click
 
-// Function to handle the first click event
-function trackFirstClickEvent() {
-  if (!isFirstClickTracked) {
-    aptrinsic('track', 'First Click After Login', {
-     elementTag: clickedElement.tagName,  // e.g., BUTTON, DIV, etc.
-     elementText: clickedElement.textContent.trim(),  // The text of the clicked element
-     elementClass: clickedElement.className,  // Classes applied to the clicked element
-     elementId: clickedElement.id,  // ID of the clicked element (if any)
-     timestamp: new Date().toISOString() 
-    });
-    console.log('Tracked first click after login');
-    isFirstClickTracked = true;
-    //pulled
+ document.addEventListener('DOMContentLoaded', () => {
+  let firstClickTracked = false; // Flag to ensure only the first click is tracked
 
-    // Remove the event listener after tracking the first click
-    document.removeEventListener('click', trackFirstClickEvent);
-  }
-}
+  // Function to track the first click event
+  const trackFirstClick = (event) => {
+      if (!firstClickTracked) {
+          firstClickTracked = true; // Mark that the first click has been tracked
+
+          // Capture details of the clicked element (optional)
+          const element = event.target;
+          const elementDetails = {
+              tagName: element.tagName,
+              id: element.id || 'N/A',
+              className: element.className || 'N/A',
+              innerText: element.innerText.trim() || 'N/A',
+          };
+
+          // Log the custom event to Gainsight PX
+          if (typeof aptrinsic !== 'undefined') {
+              aptrinsic('track', 'homepage_first_click', {
+                  clickedElement: elementDetails,
+                  timestamp: new Date().toISOString(),
+              });
+          } else {
+              console.error('Gainsight PX SDK (aptrinsic) is not initialized.');
+          }
+
+          // Optionally, remove the event listener after the first click is tracked
+          document.removeEventListener('click', trackFirstClick);
+      }
+  };
+
+  // Add an event listener to the document for click events
+  document.addEventListener('click', trackFirstClick);
+});
 
 
 function checkIfValidUser() {
